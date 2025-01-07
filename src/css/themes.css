@@ -1,0 +1,41 @@
+.themesPage > div,.themePage .questions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+/* theme page */
+.themePage .filAriane {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    color :white;
+    margin-bottom: 50px;
+}
+
+.themePage > .filAriane span:first-child {
+    color: var(--black);
+    background-color: white;
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+.themePage > .filAriane span:last-child {
+    color: white;
+    font-weight: bold;
+}
+
+.themePage .questions > div{
+   display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    gap: 21px;
+}
+
+
+.themePage .questions > div > a {
+    width: 100%;
+}

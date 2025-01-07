@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --black: #1C1C1C;
+    --grey: #959595;
+    --black-second-background: #202020;
+    --black-third-background: #171717;
+    --blue : #3B8FD1;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    background: var(--black);
+    font-size: 20px;
+    font-weight: 500;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+::selection {
+    background: var(--blue);
+    color: black;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: var(--blue);
+    color: #EEE;
+    text-shadow: none;
+}
+/*==========FONT================*/
+.lg-text{
+    font-weight: 500;
+    font-size: 24px;
+}.lg-bold-text{
+    font-weight: bold;
+    font-size: 24px;
+}
+.md-text{
+    font-weight: 400;
+    font-size: 20px;
+}.md-bold-text{
+     font-weight: bold;
+     font-size: 20px;
+ }.sm-text{
+     font-weight: 500;
+     font-size: 17px;
+ }.xsm-text{
+     font-weight: 500;
+     font-size: 16px;
+ }
+
+/*==========BASIC================*/
+.error{
+    color: #912626 !important;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*=============COMPONENT==============*/
+
+
+/*custom title*/
+
+
+.customTitle {
+    width: fit-content;
+    position: relative;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 50px;
+}
+
+.customTitle h1 {
+font-family: Inter,sans-serif;
+    font-size: 128px;
+    color: #ffffff1c;
+    margin: 0;
+}
+
+.customTitle h2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+}
+
+
+
+/* forms */
+
+
+.basicForm{
+    display: flex;
+    flex-direction: column;
+}
+.basicForm fieldset {
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+}
+
+.basicForm  label,.basicForm  legend{
+    width: 30%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.basicForm  input,.basicForm  textarea,.basicForm  select{
+    width: 100%;
+    background: var(--black-second-background);
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+    padding: 20px 24px;
+    box-sizing: border-box;
+    color: white;
+    outline: 0;
+
+    font-size: 20px;
+}
+.basicForm span{
+    color: white;
+
+}
+.basicForm  input:focus-visible,.basicForm  textarea:focus-visible,.basicForm  select:focus-visible,.basicForm  label:focus-visible,
+.basicForm  input:focus,.basicForm  textarea:focus,.basicForm  select:focus,.basicForm  label:focus
+{
+    border: 1px solid var(--blue);
+}
+
+.basicForm  input::placeholder{
+    color: var(--grey);
+    font-size:  18px;
+}
+
+
+.basicForm .oneChoice{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+
+/* row for theme */
+
+
+.rowForList{
+    color: white;
+        width: 100%;
+        border: 1px solid #484848;
+        border-radius: 10px;
+        padding: 24px 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    background-color: var(--black-second-background);
+}
+
+.rowForList .icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+}
+
+.rowForList .icons div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}

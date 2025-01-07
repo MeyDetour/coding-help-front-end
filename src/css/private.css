@@ -1,0 +1,93 @@
+.privatePage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+/*================NAVBAR=======================*/
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    width: 15vw;
+
+    gap: 60px;
+    background: var(--black-third-background);
+    border-right: 1px solid black;
+
+    padding: 38px 31px;
+    box-sizing: border-box;
+}
+/*title and logo*/
+nav img {
+    width: 30px;
+}
+nav >div > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav div .titleSpan1 {
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+nav div .titleSpan2 {
+    font-size: 30px;
+}
+/*Links*/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: var(--grey);
+}
+
+nav ul li {
+    background-color: var(--black);
+    border-bottom: 4px solid var(--black-second-background);
+    border-radius: 10px;
+
+    padding: 13px 10px;
+    box-sizing: border-box;
+}
+
+nav ul .focus {
+    font-weight: bold;
+    color: #B0AFAA;
+}
+/*sign*/
+nav >span{
+    color: var(--grey);
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+
+nav span:last-child {
+    cursor: pointer;
+}
+/*================CONTENT=======================*/
+
+.content{
+    height: 100%;
+    width: 85vw;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    padding: 68px 58px;
+    box-sizing: border-box;
+}

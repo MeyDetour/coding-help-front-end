@@ -1,0 +1,82 @@
+/* question form */
+.questionPage {
+    padding: 0 !important;
+}
+
+/* ====================== header ====================== */
+.questionPage .titleHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 26px 56px;
+    box-sizing: border-box;
+    background: var(--black-third-background);
+}
+
+/* ---------------- textes ---------------*/
+
+/* title of question */
+.questionPage .titleHeader > span {
+    color: white;
+}
+
+/* created at*/
+.questionPage .titleHeader > div > span {
+    color: #787575;
+}
+
+
+/* counters with icons */
+.questionPage .titleHeader > div > div span {
+    color: white;
+}
+
+
+/* ---------------- layout ---------------*/
+
+
+.questionPage .titleHeader > div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 28%;
+    justify-content: space-between;
+}
+
+.questionPage .titleHeader > div > div {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+    align-items: flex-end;
+}
+
+/* ====================== author   ====================== */
+.questionPage .authorSection {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    background: var(--black-second-background);
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.questionPage .authorSection img {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
+/* ====================== content  ====================== */
+.questionPage .questionContent {
+    padding: 68px 58px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* render question */

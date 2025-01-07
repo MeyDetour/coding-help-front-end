@@ -1,0 +1,142 @@
+
+
+
+
+/*==========TITLE================*/
+
+.titleSpan1 {
+    background: -webkit-linear-gradient(10deg, #346F9D, var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titleSpan2 {
+    background: -webkit-linear-gradient(-15deg, #F4E096, #F5D044);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 10px;
+}
+
+.titleSpan1, .titleSpan2 {
+    font-weight: bold;
+}
+
+.fs-60{
+    font-size: 60px;
+}
+/*============BUTTONS=============*/
+
+.button0 {
+    background: white;
+    color: var(--black);
+}
+
+.button1 {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.button0,.button1{
+    display: flex;
+flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 43px;
+width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 19px;
+    box-sizing: border-box;
+}
+
+/*===============HEADER=============*/
+.homePage {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homePage .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.homePage .header > div {
+gap: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.homePage > p {
+    color: white;
+    font-size: 42px;
+    width: 50%;
+
+    margin-block: 31vh;
+}
+
+.homePage .greyText {
+    color: var(--grey);
+    font-size: 34px;
+}
+
+.homePage .descriptionContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 76%;
+    margin-bottom: 40vh;
+}
+
+.homePage .descriptionContainer .oneTechno {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+
+    width: 29%;
+}
+
+.homePage .descriptionContainer .oneTechno p {
+    color: var(--grey);
+
+}
+
+.homePage .descriptionContainer .oneTechno .logoBackground {
+    background: var(--black-second-background);
+    border: 1px solid #484848;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-width: 40px;
+    min-height: 40px;
+}
+.homePage .descriptionContainer .oneTechno span {
+
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 42px;
+}
+
+.homePage .descriptionContainer #reactSection > span {
+    background: -webkit-linear-gradient(10deg, #61DAFB, #22C5F1);
+    -webkit-background-clip: text;
+}
+
+.homePage .descriptionContainer #djangoSection > span { background: -webkit-linear-gradient(180deg, #2BA977, #278E65);
+    -webkit-background-clip: text;
+}
+
+.homePage .descriptionContainer #postgresqlSection > span { background: -webkit-linear-gradient(-91deg, #258ADB, #9DBDD6);
+    -webkit-background-clip: text;
+}
