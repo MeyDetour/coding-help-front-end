@@ -13,13 +13,12 @@ export default function OneQuestion({questionId}) {
     const toast = useToast();
     const [question, setQuestion] = useState(null);
     const [navigateTo, setNavigateTo] = useState(null);
-    console.log(questionId)
 
     useEffect(() => {
         api(`api/question/${questionId}`)
             .then(res => {
                 setQuestion(res);
-                console.log(question);
+
             })
             .catch(err => {
                 toast(" ", "Fetch error :" + err.message);
@@ -73,7 +72,7 @@ export default function OneQuestion({questionId}) {
                                     <div className="hr"></div>
                                     <div id={response.id}>
                                         <div><CustomImage
-                                            link={process.env.REACT_APP_API_URL + response.author.image}></CustomImage>
+                                            link={response.author.image}></CustomImage>
 
                                             <span>{response.author.username}</span>
 

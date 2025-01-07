@@ -29,11 +29,10 @@ export default function useApi() {
             return data; // Retourne les données
         } catch (error) {
             console.log(error)
-            if (error.status === 401) {
+             if (error.status === 401) {
                 sessionStorage.removeItem("token");
                 navigate("/login");
                 throw new Error("Your session has expired. Please log in again.");
-
             }
             throw new Error(error.data?.message || "An unexpected error occurred.");
         }

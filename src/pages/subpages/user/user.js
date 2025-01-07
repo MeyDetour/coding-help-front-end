@@ -4,8 +4,7 @@ import {useToast} from "../../../hooks/useToast";
 import CustomTitle from "../../../components/customTitle";
 import {Link} from "react-router-dom";
 import '../../../css/themes.css'
-import ListOfUsers from "../questions/listOfUsers";
-export default function Users() {
+export default function OneUSer({userId}) {
 
     const api = useApi();
     const toast = useToast();
@@ -23,7 +22,14 @@ export default function Users() {
     return (
         <>
             <CustomTitle backgroundWord={"Top"} mainWord={"Themes"}></CustomTitle>
-           <ListOfUsers listOfUsers={users} ></ListOfUsers>
+          <div>
+              {users && users.map((item, i) => (
+                  <Link key={i} to={`/private/user/${item.id}`}>
+                 <span>{item.username}</span>
+                  </Link>
+
+              ))}
+          </div>
 
         </>
 

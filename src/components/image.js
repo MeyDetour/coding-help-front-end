@@ -3,6 +3,6 @@ import "../App.css"
 
 export default function CustomImage({link}){
     return (
-        <img src={link ? link : "/defaultImage.png"} alt=""/>
+        <img src={link ? process.env.REACT_APP_API_URL +link : "/defaultImage.png"} alt=""/>
     )
 }

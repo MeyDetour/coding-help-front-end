@@ -2,21 +2,19 @@ import "../css/private.css"
 import {Link, Navigate, useParams} from "react-router-dom";
 import React, {useState} from "react";
 import Dashboard from "./subpages/dashboard";
-import Profile from "./subpages/profile";
 import Settings from "./subpages/settings";
 import NewQuestion from "./subpages/questions/newQuestion";
 import Themes from "./subpages/themes/themes";
 import OneTheme from "./subpages/themes/oneTheme";
 import OneQuestion from "./subpages/questions/oneQuestion";
 import Users from "./subpages/user/users";
+import Profile from "./subpages/user/profile";
+import OneUSer from "./subpages/user/user";
 
 export default function Private() {
     const { subpage, '*': wildcard } = useParams();
     const [redirectRoute, setRedirectRoute] = useState(null);
-
-    console.log(subpage)
-
-    const deconnexion = function (){
+  const deconnexion = function (){
         sessionStorage.setItem("token", " ")
         setRedirectRoute("/login")
     }
@@ -39,12 +37,12 @@ export default function Private() {
                         <Link to={"/private/dashboard"} className={subpage === "dashboard" ? "focus" : null}>Dashboard</Link>
                     </li>
                     <li>
-                        <Link to={"/private/themes"} className={subpage === "themes" || subpage.startsWith("theme")|| subpage.startsWith("question") ? "focus" : null}>All
+                        <Link to={"/private/themes"} className={subpage === "themes" || subpage === "theme"|| subpage.startsWith("question") ? "focus" : null}>All
                             themes</Link>
                     </li>
 
                     <li>
-                        <Link to={"/private/users"} className={subpage === "users" ? "focus" : null}>All users</Link>
+                        <Link to={"/private/users"} className={subpage === "users" || subpage === "user" ? "focus" : null}>All users</Link>
                     </li><li>
                         <Link to={"/private/profile"} className={subpage === "profile" ? "focus" : null}>You
                             profile</Link>
@@ -61,8 +59,9 @@ export default function Private() {
             <div className={`content
             ${subpage === 'dashboard' ? "dashboardPage" : " "}
             ${subpage === 'themes' ? "themesPage" : " "}
-            ${subpage.startsWith("theme") ? "themePage" : " "}
-            ${subpage.startsWith("question") ? "questionPage" : " "}
+            ${subpage === "theme" ? "themePage" : " "}
+            ${subpage === "question" ? "questionPage" : " "}
+            ${subpage === "user" ? "userPage" : " "}
             ${subpage === 'profile' ? "profilePage" : " "}
             ${subpage === 'users' ? "usersPage" : " "}
             ${subpage === 'settings' ? "settingsPage" : " "}
@@ -73,6 +72,7 @@ export default function Private() {
                 {subpage === "users" && <Users/>}
                 {subpage === "theme" && wildcard && <OneTheme themeId={wildcard} />}
                 {subpage === "question" && wildcard && <OneQuestion questionId={wildcard}  />}
+                {subpage === "user" && wildcard && <OneUSer userId={wildcard}  />}
                 {subpage === "profile" && <Profile/>}
                 {subpage === "settings" && <Settings/>}
                 {subpage === "ask" && <NewQuestion/>}

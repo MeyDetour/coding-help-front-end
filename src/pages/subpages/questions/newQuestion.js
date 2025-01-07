@@ -74,7 +74,6 @@ export default function NewQuestion() {
 
 
         /* TO CREATE QUESTION */
-        console.log(data)
         try {
             const res = await api("api/question/new", null, data, 'POST', true)
             setRedirectRoute('/private/question/' + res.id)

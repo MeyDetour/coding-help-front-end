@@ -1,10 +1,10 @@
-export default function Row({name, type, number1, number2,isQuestionValidate=null}) {
+export default function Row({name, type, number1, number2, isQuestionValidate = null}) {
     return (
         <div className={"rowForList"}>
             <span>{name}</span>
             <div className={"icons"}>
                 <div>
-                   <img src="/icon/people.svg" alt="contributor icon"/>
+                    <img src="/icon/people.svg" alt="contributor icon"/>
                     <span>{number1}</span>
                 </div>
 

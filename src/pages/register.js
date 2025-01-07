@@ -14,13 +14,9 @@ export default function Register() {
     const toast = useToast();
     const navigate = useNavigate();
 
-    console.log(process.env.REACT_APP_API_URL);
     const onSubmit = (data) => {
-        console.log(data);
-        alert(`Form submitted: ${JSON.stringify(data)}`);
-        api("/register", null, data, "post", false)
+   api("/register", null, data, "post", false)
             .then((res) => {
-                console.log(res);
                 toast("OK", "Register Successfully. You can log in");
                 navigate("/login");
             })

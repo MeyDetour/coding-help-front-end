@@ -5,7 +5,7 @@
     --grey: #959595;
     --black-second-background: #202020;
     --black-third-background: #171717;
-    --blue : #3B8FD1;
+    --blue: #3B8FD1;
 }
 
 body {
@@ -24,6 +24,7 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
 ::selection {
     background: var(--blue);
     color: black;
@@ -35,35 +36,53 @@ body {
     color: #EEE;
     text-shadow: none;
 }
+
 /*==========FONT================*/
-.lg-text{
+.lg-text {
     font-weight: 500;
     font-size: 24px;
-}.lg-bold-text{
+}
+
+.lg-bold-text {
     font-weight: bold;
     font-size: 24px;
 }
-.md-text{
+
+.md-text {
     font-weight: 400;
     font-size: 20px;
-}.md-bold-text{
-     font-weight: bold;
-     font-size: 20px;
- }.sm-text{
-     font-weight: 500;
-     font-size: 17px;
- }.xsm-text{
-     font-weight: 500;
-     font-size: 16px;
- }
+}
+
+.md-bold-text {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sm-text {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.xsm-text {
+    font-weight: 500;
+    font-size: 16px;
+}
 
 /*==========BASIC================*/
-.error{
+.error {
     color: #912626 !important;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
+}
+
+.hr {
+    width: 100%;
+    background: #414141;
+    height: 0.5px;
+    margin-block: 20px;
 }
 
 /*=============COMPONENT==============*/
@@ -82,7 +101,7 @@ a{
 }
 
 .customTitle h1 {
-font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 128px;
     color: #ffffff1c;
     margin: 0;
@@ -98,20 +117,20 @@ font-family: Inter,sans-serif;
 }
 
 
-
 /* forms */
 
 
-.basicForm{
+.basicForm {
     display: flex;
     flex-direction: column;
 }
+
 .basicForm fieldset {
     border: 1px solid var(--grey);
     border-radius: 10px;
 }
 
-.basicForm  label,.basicForm  legend{
+.basicForm label, .basicForm legend {
     width: 30%;
     color: white;
     font-weight: bold;
@@ -119,7 +138,7 @@ font-family: Inter,sans-serif;
     flex-direction: column;
 }
 
-.basicForm  input,.basicForm  textarea,.basicForm  select{
+.basicForm input, .basicForm textarea, .basicForm select {
     width: 100%;
     background: var(--black-second-background);
     border: 1px solid var(--grey);
@@ -131,23 +150,24 @@ font-family: Inter,sans-serif;
 
     font-size: 20px;
 }
-.basicForm span{
+
+.basicForm span {
     color: white;
 
 }
-.basicForm  input:focus-visible,.basicForm  textarea:focus-visible,.basicForm  select:focus-visible,.basicForm  label:focus-visible,
-.basicForm  input:focus,.basicForm  textarea:focus,.basicForm  select:focus,.basicForm  label:focus
-{
+
+.basicForm input:focus-visible, .basicForm textarea:focus-visible, .basicForm select:focus-visible, .basicForm label:focus-visible,
+.basicForm input:focus, .basicForm textarea:focus, .basicForm select:focus, .basicForm label:focus {
     border: 1px solid var(--blue);
 }
 
-.basicForm  input::placeholder{
+.basicForm input::placeholder {
     color: var(--grey);
-    font-size:  18px;
+    font-size: 18px;
 }
 
 
-.basicForm .oneChoice{
+.basicForm .oneChoice {
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -157,29 +177,83 @@ font-family: Inter,sans-serif;
 /* row for theme */
 
 
-.rowForList{
+.rowForList {
     color: white;
-        width: 100%;
-        border: 1px solid #484848;
-        border-radius: 10px;
-        padding: 24px 20px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    width: 100%;
+    border: 1px solid #484848;
+    border-radius: 10px;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: var(--black-second-background);
 }
 
-.rowForList .icons{
+.rowForList .icons {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 60px;
 }
 
-.rowForList .icons div{
+.rowForList .icons div {
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
+}
+
+
+/* question list */
+
+.questionsList {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+/* user list */
+.usersList {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.usersList > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.usersList .name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 29%;
+}
+.usersList .name img{
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.usersList .createdAt {
+    color: #787575;
+}
+
+.usersList .counters{
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: self-end;
+}
+
+
+.usersList .counters span:first-child{
+    color: #787575;
 }
