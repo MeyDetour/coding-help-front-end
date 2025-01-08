@@ -29,6 +29,14 @@ export default function Profile() {
     }, []);
 
 
+    const deleteAccount = async function () {
+        try {
+            const res3 = await api("api/profile",null,null,"DELETE",true)
+            console.log(res3)
+        } catch (err) {
+            toast(" ", "Error while fetching profile data : " + err.message);
+        }
+    }
 
 
     const changeSubpage = async function (subpage) {
@@ -57,6 +65,7 @@ export default function Profile() {
                             <span className={"md-text"}>{profile.email}</span>
                             <span className={"md-text"}>{profile.created_at}</span>
                         </div>
+                        <button onClick={deleteAccount}>Supprimer</button>
 
                     </div>
 
