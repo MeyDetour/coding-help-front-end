@@ -1,0 +1,25 @@
+.settingsPage {
+
+}
+
+.settingsPage ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+gap: 42px;
+}
+
+.settingsPage ul li {
+    display: flex;
+    flex-direction: row;
+    color: var(--grey);
+    cursor: pointer;
+}
+
+
+
+.settingsPage ul .focus {
+    color: white !important;
+    font-weight: bold;
+}

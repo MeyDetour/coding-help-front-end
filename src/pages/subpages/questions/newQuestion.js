@@ -5,6 +5,7 @@ import {useToast} from "../../../hooks/useToast";
 import {Navigate} from "react-router-dom";
 
 import "../../../css/questions.css"
+import ContentTextAreaMarkdown from "../../../components/contentTextAreaMarkdown";
 export default function NewQuestion() {
 
     const api = useApi();
@@ -17,7 +18,6 @@ export default function NewQuestion() {
 
 
     const [themes, setThemes] = useState(null);
-    const [themeId, setThemeId] = useState(null);
     const [redirectRoute, setRedirectRoute] = useState(null);
 
 
@@ -33,7 +33,7 @@ export default function NewQuestion() {
 
 
     const onSubmit = async (data) => {
-
+        let themeId = null
         let newThemeName = data["newThemeName"].replace(/\s+/g, '');
         delete data["newThemeName"];
 
@@ -61,7 +61,7 @@ export default function NewQuestion() {
         if (newThemeName !== '') {
             try {
                 const res = await api("api/theme/new", null, {"name": newThemeName}, 'POST', true)
-                setThemeId(res.id)
+                themeId = res.id
             } catch (err) {
                 toast(" ", "Error while creating theme : " + err.message);
             }
@@ -113,10 +113,8 @@ export default function NewQuestion() {
             {/* Champ requis avec validation */}
             <label>
                 Content
-                <textarea
-                    placeholder="Your question content"
-                    {...register("content", {required: "Content field is required"})}
-                />
+                <ContentTextAreaMarkdown register={register}></ContentTextAreaMarkdown>
+
             </label>
 
             <fieldset>
@@ -136,7 +134,6 @@ export default function NewQuestion() {
             <label>
                 Other theme
                 <input
-                    placeholder='Another theme not created '
                     {...register("newThemeName")}
                 />
             </label>

@@ -19,11 +19,14 @@ export default function Users() {
                 toast(" ", "Fetch error :" + err.message);
             })
     }, [])
-
     return (
         <>
-            <CustomTitle backgroundWord={"Top"} mainWord={"Themes"}></CustomTitle>
-           <ListOfUsers listOfUsers={users} ></ListOfUsers>
+            {users &&
+            <>   <CustomTitle backgroundWord={"Top"} mainWord={"Users"}></CustomTitle>
+                <ListOfUsers listOfUsersData={users} ></ListOfUsers>
+
+            </>
+            }
 
         </>
 

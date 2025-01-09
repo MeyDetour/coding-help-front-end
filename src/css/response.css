@@ -1,0 +1,129 @@
+/* ================== new response ================== */
+
+.questionPage .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background: #222222;
+    height: 100%;
+    box-shadow: #0000002b -20px 0px 25px 0px;
+    padding: 37px;
+    box-sizing: border-box;
+}
+
+
+/* ================== response list  in question view ================== */
+
+.questionPage .oneResponse  {
+width: 100%;
+}
+.questionPage .oneResponse summary {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+}
+
+/* image et username */
+.questionPage .oneResponse summary div:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.questionPage .oneResponse summary div:first-child img {
+    width: 34px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
+/* informations  */
+.questionPage .oneResponse summary div:last-child {
+
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: flex-end;
+
+
+}
+
+/* created at */
+.questionPage .oneResponse summary div:last-child > span {
+    color: var(--grey) !important;
+}
+
+/* votes */
+.questionPage .oneResponse summary div:last-child > div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: baseline;
+}
+
+.questionPage .oneResponse .responseContent{
+
+    padding: 28px 0px;
+}
+
+
+
+/* ================== list of response in profile ================== */
+.listOfResponsesInProfile{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.listOfResponsesInProfile a {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
+
+/* image et username */
+    .listOfResponsesInProfile a > div:first-child {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+.listOfResponsesInProfile a> div:first-child {
+
+    height: 40px;
+    width: 9px;
+    background: var(--blue);
+    border-radius: 0px 10px 10px 0px;
+}
+
+
+/* informations  */
+.listOfResponsesInProfile a> div:last-child {
+
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: flex-end;
+
+
+}
+
+/* created at */
+.listOfResponsesInProfile a >div:last-child > span {
+    color: var(--grey) !important;
+}
+
+/* votes */
+.listOfResponsesInProfile a> div:last-child > div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: baseline;
+}

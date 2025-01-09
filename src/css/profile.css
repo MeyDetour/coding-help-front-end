@@ -19,10 +19,16 @@
     flex-direction: column;
     justify-content: start;
     padding-top: 30px;
+
 }
 
-.profilePage .section1 >div:first-child{
+.profilePage .section1 >div span{
+color: var(--grey);
+}
 
+
+.profilePage .section1 >div span:first-child{
+color: white;
 }
 
 

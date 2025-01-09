@@ -50,6 +50,34 @@
     align-items: flex-end;
 }
 
+
+/* ====================== content  ====================== */
+.questionPage .row{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.questionPage .left{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    position: relative;
+    color: white;
+}
+.questionPage .questionContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.questionPage .left-open{
+    padding: 68px 58px;
+    box-sizing: border-box;
+}
+
 /* ====================== author   ====================== */
 .questionPage .authorSection {
     width: fit-content;
@@ -71,12 +99,3 @@
 }
 
 
-/* ====================== content  ====================== */
-.questionPage .questionContent {
-    padding: 68px 58px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* render question */

@@ -1,0 +1,41 @@
+.contentTextAreaMarkdown{
+position: relative;
+    font-weight: 500;
+}
+
+
+
+.contentTextAreaMarkdown .listOFOptions {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 10px;
+}
+
+
+.contentTextAreaMarkdown .listOFOptions li {
+    cursor: pointer;
+    width: 31px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.contentTextAreaMarkdown .listOFOptions .toItalic{
+    font-style: italic;
+}
+
+.contentTextAreaMarkdown .listOFOptions{}
+.contentTextAreaMarkdown .listOFOptions{}
+.contentTextAreaMarkdown .listOFOptions{}
+
+
+
+.contentTextAreaMarkdown {}
+.contentTextAreaMarkdown {}
+.contentTextAreaMarkdown {}
+.contentTextAreaMarkdown {}

@@ -4,7 +4,7 @@ import useApi from "../../../hooks/useApi";
 import {useToast} from "../../../hooks/useToast";
 import {useEffect, useState} from "react";
 
-export default function ListOfUsers({listOfUsers}) {
+export default function ListOfUsers({listOfUsersData}) {
 
 
     /* variable you can change*/
@@ -16,7 +16,7 @@ export default function ListOfUsers({listOfUsers}) {
     const api = useApi();
     const toast = useToast();
     const [followingsId, setFollowings] = useState(null);
-    const [listOfUsers, setListOfUsers] = useState(listOfUsers);
+    const [listOfUsers, setListOfUsers] = useState(null);
     const [ownId, setOwnId] = useState(null);
 
 
@@ -30,14 +30,17 @@ export default function ListOfUsers({listOfUsers}) {
                     followingsid.push(following.id)
                 }
                 setFollowings(followingsid)
-                const res2 = await api("api/profile")
+                 setListOfUsers(listOfUsersData)
+                  const res2 = await api("api/profile")
                 setOwnId(res2.id)
             } catch (err) {
                 toast(" ", "Error while fetching profile data : " + err.message);
             }
         };
         fetchData();
+
     }, []);
+
 
     const follow = async function (id) {
         try {
@@ -45,7 +48,13 @@ export default function ListOfUsers({listOfUsers}) {
 
            /* for dynamic render */
             setFollowings(prevFollowings => [...prevFollowings, id]);
-
+            setListOfUsers(prevList =>
+                prevList.map(user =>
+                    user.id === id
+                        ? { ...user, followers_count: user.followers_count + 1 }
+                        : user
+                )
+            );
         } catch (err) {
             toast(" ", "Error while following user : " + err.message);
         }
@@ -54,12 +63,17 @@ export default function ListOfUsers({listOfUsers}) {
         try {
             const res3 = await api("api/unfollow/user/" + id, null, null, "PATCH", true)
             setFollowings(prevFollowings => prevFollowings.filter(followingId => followingId !== id));
-
+            setListOfUsers(prevList =>
+                prevList.map(user =>
+                    user.id === id
+                        ? { ...user, followers_count: Math.max(user.followers_count - 1, 0) }
+                        : user
+                )
+            );
         } catch (err) {
             toast(" ", "Error while unfollowing user : " + err.message);
         }
     }
-
     /* template */
     return (<>
 
